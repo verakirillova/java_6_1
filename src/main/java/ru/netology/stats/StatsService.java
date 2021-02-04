@@ -10,13 +10,8 @@ public class StatsService {
     }
 
     public long averageValue (long [] sales) {
-      long value = 0;
 
-      for (long sale: sales) {
-          value += sale;
-      }
-
-      value = value / sales.length;
+      long value = this.calculateSum(sales) / sales.length;
       return value;
     }
 
